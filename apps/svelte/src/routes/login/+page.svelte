@@ -1,7 +1,18 @@
-<h2>Login</h2>
-<form method="POST">
-	<label for="email">Email</label>
-	<input id="email" type="email" name="email" required />
+<script lang="ts">
+	import { Button, Label, Heading, Input } from 'svelte-5-ui-lib';
+</script>
 
-	<button type="submit">Continue</button>
+<svelte:head>
+	<title>My Farm - Login</title>
+</svelte:head>
+
+<Heading tag="h4">Login</Heading>
+
+<form method="POST">
+	<div class="mb-6">
+		<Label for="email">Email</Label>
+		<Input id="email" type="email" name="email" required placeholder="Email" />
+	</div>
+
+	<Button type="submit">Continue</Button>
 </form>

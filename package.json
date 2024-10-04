@@ -1,12 +1,9 @@
 {
-  "name": "my-farm",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@my-farm",
+  "private": true,
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "dev": "pnpm --parallel --recursive --filter '*' dev",
+    "db:push": "pnpm --filter @my-farm/db push"
+  }
 }

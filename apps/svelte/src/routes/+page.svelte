@@ -1,12 +1,17 @@
 <script lang="ts">
-	export let data;
+	import { Button, Heading } from 'svelte-5-ui-lib';
+
+	let { data } = $props();
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>My Farm</title>
 </svelte:head>
 
 <section>
-	<h1>Welcome {data.user.email}</h1>
+	<Heading tag="h3" class="mb-6">Welcome {data.user.email}</Heading>
+
+	<form method="post">
+		<Button type="submit">Sign Out</Button>
+	</form>
 </section>
