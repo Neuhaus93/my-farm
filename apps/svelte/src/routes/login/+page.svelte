@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button, Label, Heading, Input } from 'svelte-5-ui-lib';
+	import { Button, Label, Heading, Input } from "svelte-5-ui-lib";
 </script>
 
 <svelte:head>

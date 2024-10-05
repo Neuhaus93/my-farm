@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button, Heading } from 'svelte-5-ui-lib';
+	import { Heading } from "svelte-5-ui-lib";
 
 	let { data } = $props();
 </script>
@@ -10,8 +10,4 @@
 
 <section>
 	<Heading tag="h3" class="mb-6">Welcome {data.user.email}</Heading>
-
-	<form method="post">
-		<Button type="submit">Sign Out</Button>
-	</form>
 </section>
