@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Heading } from "svelte-5-ui-lib";
+	import UpsertTransaction from "$lib/components/upsert-transaction.svelte";
 
 	let { data } = $props();
 </script>
@@ -9,5 +9,7 @@
 </svelte:head>
 
 <section>
-	<Heading tag="h3" class="mb-6">Welcome {data.user.email}</Heading>
+	<UpsertTransaction />
+
+	<div class="h-[1000px]"></div>
 </section>

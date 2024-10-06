@@ -16,6 +16,8 @@
 	"devDependencies": {
 		"@fontsource/fira-mono": "^5.0.0",
 		"@lucia-auth/adapter-drizzle": "^1.1.0",
+		"@melt-ui/pp": "^0.3.2",
+		"@melt-ui/svelte": "^0.83.0",
 		"@neoconfetti/svelte": "^2.0.0",
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -25,17 +27,16 @@
 		"@types/eslint": "^9.6.0",
 		"@types/pg": "^8.11.10",
 		"autoprefixer": "^10.4.20",
+		"daisyui": "^4.12.12",
 		"eslint": "^9.0.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0",
-		"flowbite-svelte-icons": "2.0.0-next.16",
 		"globals": "^15.0.0",
 		"lucia": "^3.2.0",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
 		"prettier-plugin-tailwindcss": "^0.6.5",
 		"svelte": "^5.0.0-next.1",
-		"svelte-5-ui-lib": "^0.9.17",
 		"svelte-check": "^4.0.0",
 		"tailwindcss": "^3.4.9",
 		"typescript": "^5.0.0",
@@ -46,6 +47,7 @@
 	"type": "module",
 	"dependencies": {
 		"@my-farm/db": "workspace:*",
+		"@my-farm/ui": "workspace:*",
 		"drizzle-orm": "^0.33.0",
 		"zod": "^3.23.8"
 	}
