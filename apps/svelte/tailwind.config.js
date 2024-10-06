@@ -1,12 +1,6 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 /** @type {import('tailwindcss').Config} */
-export default {
-	content: ["./src/**/*.{html,js,svelte,ts}"],
-	theme: {
-		extend: {},
-	},
-	plugins: [require("@tailwindcss/typography"), require("daisyui")],
-	daisyui: {
-		themes: ["light"],
-	},
+module.exports = {
+	content: ["./src/**/*.{html,js,svelte,ts}", "node_modules/preline/dist/*.js"],
+	plugins: [require("@tailwindcss/forms"), require("preline/plugin")],
 };

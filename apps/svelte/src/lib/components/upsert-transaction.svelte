@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Button } from "@my-farm/ui";
 	let categories = [
 		{ value: 1, name: "First" },
 		{ value: 2, name: "Second" },
@@ -18,30 +19,33 @@
 		</select>
 	</label>
 
-	<label class="form-control w-full max-w-xs">
-		<div class="label">
-			<span class="label-text">Value</span>
-		</div>
+	<div class="max-w-sm">
+		<label
+			for="input-amount"
+			class="mb-2 block text-sm font-medium dark:text-white">Amount</label
+		>
 		<input
-			class="input"
 			type="number"
-			placeholder="Value"
+			id="input-amount"
 			name="amount"
-			required
+			class="block w-full rounded-lg border-gray-200 px-4 py-3 text-sm focus:border-blue-500 focus:ring-blue-500 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+			placeholder="R$ 0,00"
 		/>
-	</label>
+	</div>
 
-	<label class="form-control w-full max-w-xs">
-		<div class="label">
-			<span class="label-text">Description</span>
-		</div>
+	<div class="max-w-sm">
+		<label
+			for="input-description"
+			class="mb-2 block text-sm font-medium dark:text-white">Description</label
+		>
 		<input
-			class="input"
 			type="text"
-			placeholder="Description"
+			id="input-description"
 			name="description"
+			class="block w-full rounded-lg border-gray-200 px-4 py-3 text-sm focus:border-blue-500 focus:ring-blue-500 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+			placeholder="Description"
 		/>
-	</label>
+	</div>
 
-	<button class="btn">Create Transaction</button>
+	<Button>Create Transaction</Button>
 </form>
