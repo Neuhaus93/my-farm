@@ -1,23 +1,27 @@
 <script lang="ts">
-	import { Button } from "@my-farm/ui";
+	import Button from "$lib/ui/button/button.svelte";
 	let categories = [
 		{ value: 1, name: "First" },
 		{ value: 2, name: "Second" },
 	];
 </script>
 
-<form method="post">
-	<label class="form-control w-full max-w-xs">
-		<div class="label">
-			<span class="label-text">Select Category</span>
-		</div>
-		<select class="select select-bordered">
-			<option disabled selected>Pick one</option>
+<form method="post" class="space-y-4">
+	<div class="max-w-sm">
+		<label
+			for="hs-select-label"
+			class="mb-2 block text-sm font-medium dark:text-white">Label</label
+		>
+		<select
+			id="hs-select-label"
+			class="block w-full rounded-lg border-gray-200 px-4 py-3 pe-9 text-sm focus:border-blue-500 focus:ring-blue-500 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+		>
+			<option selected>Open this select menu</option>
 			{#each categories as category (category.value)}
 				<option value={category.value}>{category.name}</option>
 			{/each}
 		</select>
-	</label>
+	</div>
 
 	<div class="max-w-sm">
 		<label

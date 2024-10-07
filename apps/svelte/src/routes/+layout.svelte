@@ -1,5 +1,6 @@
 <script lang="ts">
 	import "../app.css";
+	import Sidebar from "$lib/ui/sidebar/sidebar.svelte";
 	let { data, children } = $props();
 
 	const site = {
@@ -19,35 +20,9 @@
 	];
 </script>
 
-<!-- {#if data.user} -->
-<!-- 	<Sidebar -->
-<!-- 		class="h-full" -->
-<!-- 		activeClass="bg-gray-100 dark:bg-gray-700" -->
-<!-- 		backdrop={false} -->
-<!-- 		isOpen={true}> -->
-<!-- 		<SidebarGroup class={groupClass}> -->
-<!-- 			<SidebarBrand {site} /> -->
-<!-- 			{#each items as item (item.label)} -->
-<!-- 				<SidebarItem -->
-<!-- 					label={item.label} -->
-<!-- 					href={item.href} -->
-<!-- 					aClass={itemClass} -->
-<!-- 					spanClass="ml-4"> -->
-<!-- 					{#snippet iconSlot()} -->
-<!-- 						<item.icon class={iconClass} /> -->
-<!-- 					{/snippet} -->
-<!-- 				</SidebarItem> -->
-<!-- 			{/each} -->
-<!---->
-<!-- 			<form method="post" action="/logout"> -->
-<!-- 				<button class={`${itemClass} w-full`}> -->
-<!-- 					<ArrowRightToBracketOutline class={iconClass} /> -->
-<!-- 					<span class="ms-3">Sign Out</span> -->
-<!-- 				</button> -->
-<!-- 			</form> -->
-<!-- 		</SidebarGroup> -->
-<!-- 	</Sidebar> -->
-<!-- {/if} -->
+{#if data.user}
+	<Sidebar />
+{/if}
 
 <main class={`${data.user ? "ml-[256px] " : ""}px-4 py-5`}>
 	{@render children()}

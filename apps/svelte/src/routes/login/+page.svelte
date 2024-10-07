@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button } from "@my-farm/ui";
+	import Button from "$lib/ui/button/button.svelte";
 </script>
 
 <svelte:head>
