@@ -16,6 +16,9 @@ importers:
       drizzle-orm:
         specifier: ^0.33.0
         version: 0.33.0(@types/pg@8.11.10)(pg@8.13.0)
+      lucide-svelte:
+        specifier: ^0.447.0
+        version: 0.447.0(svelte@5.0.0-next.262)
       preline:
         specifier: ^2.5.0
         version: 2.5.0
@@ -41,9 +44,6 @@ importers:
       '@playwright/test':
         specifier: ^1.28.1
         version: 1.47.2
-      '@preline/overlay':
-        specifier: ^2.5.0
-        version: 2.5.0
       '@sveltejs/adapter-auto':
         specifier: ^3.0.0
         version: 3.2.5(@sveltejs/kit@2.6.1(@sveltejs/vite-plugin-svelte@4.0.0-next.7(svelte@5.0.0-next.262)(vite@5.4.8(@types/node@22.7.4)))(svelte@5.0.0-next.262)(vite@5.4.8(@types/node@22.7.4)))
@@ -62,6 +62,9 @@ importers:
       '@types/eslint':
         specifier: ^9.6.0
         version: 9.6.1
+      '@types/leaflet':
+        specifier: ^1.9.12
+        version: 1.9.12
       '@types/pg':
         specifier: ^8.11.10
         version: 8.11.10
@@ -83,6 +86,9 @@ importers:
       globals:
         specifier: ^15.0.0
         version: 15.10.0
+      leaflet:
+        specifier: ^1.9.4
+        version: 1.9.4
       lucia:
         specifier: ^3.2.0
         version: 3.2.0
@@ -872,9 +878,6 @@ packages:
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
 
-  '@preline/overlay@2.5.0':
-    resolution: {integrity: sha512-5eWzP2N3sTOKhgoefXdrrxUNQh8F678von6ehN1cD79ujVfShYdWowvjtzMlUiTePbF0pgM/wG6D6mRzicOMzw==}
-
   '@rollup/rollup-android-arm-eabi@4.24.0':
     resolution: {integrity: sha512-Q6HJd7Y6xdB48x8ZNVDOqsbh2uByBhgK8PiQgPhwkIw/HC/YX5Ghq2mQY5sRMZWHb3VsFkWooUVOZHKr7DmDIA==}
     cpu: [arm]
@@ -1009,8 +1012,14 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
+  '@types/geojson@7946.0.14':
+    resolution: {integrity: sha512-WCfD5Ht3ZesJUsONdhvm84dmzWOiOzOAqOncN0++w0lBw1o8OuDNJF2McvvCef/yBqb/HYRahp1BYtODFQ8bRg==}
+
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+
+  '@types/leaflet@1.9.12':
+    resolution: {integrity: sha512-BK7XS+NyRI291HIo0HCfE18Lp8oA30H1gpi1tf0mF3TgiCEzanQjOqNZ4x126SXzzi2oNSZhZ5axJp1k0iM6jg==}
 
   '@types/node@22.7.4':
     resolution: {integrity: sha512-y+NPi1rFzDs1NdQHHToqeiX2TIS79SWEAw9GYhkkx8bD0ChpfqC+n2j5OXOCpzfojBEBt6DnEnnG9MY0zk1XLg==}
@@ -1714,6 +1723,9 @@ packages:
   known-css-properties@0.34.0:
     resolution: {integrity: sha512-tBECoUqNFbyAY4RrbqsBQqDFpGXAEbdD5QKr8kACx3+rnArmuuR22nKQWKazvp07N9yjTyDZaw/20UIH8tL9DQ==}
 
+  leaflet@1.9.4:
+    resolution: {integrity: sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==}
+
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -1753,6 +1765,11 @@ packages:
 
   lucia@3.2.0:
     resolution: {integrity: sha512-eXMxXwk6hqtjRTj4W/x3EnTUtAztLPm0p2N2TEBMDEbakDLXiYnDQ9z/qahjPdPdhPguQc+vwO0/88zIWxlpuw==}
+
+  lucide-svelte@0.447.0:
+    resolution: {integrity: sha512-DDCVy79q9H1IAGmrbGDG4GZmCZK+5elK3Fxzu0RzbHKr2Khg7EMc8S6C12bzWcnfW263raqo3grthEjB5gxAjw==}
+    peerDependencies:
+      svelte: ^3 || ^4 || ^5.0.0-next.42
 
   magic-string@0.30.11:
     resolution: {integrity: sha512-+Wri9p0QHMy+545hKww7YAu5NyzF8iomPL/RQazugQ9+Ez4Ic3mERMd8ZTX5rfK944j+560ZJi8iAwgak1Ac7A==}
@@ -2976,8 +2993,6 @@ snapshots:
 
   '@popperjs/core@2.11.8': {}
 
-  '@preline/overlay@2.5.0': {}
-
   '@rollup/rollup-android-arm-eabi@4.24.0':
     optional: true
 
@@ -3102,7 +3117,13 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
+  '@types/geojson@7946.0.14': {}
+
   '@types/json-schema@7.0.15': {}
+
+  '@types/leaflet@1.9.12':
+    dependencies:
+      '@types/geojson': 7946.0.14
 
   '@types/node@22.7.4':
     dependencies:
@@ -3807,6 +3828,8 @@ snapshots:
 
   known-css-properties@0.34.0: {}
 
+  leaflet@1.9.4: {}
+
   levn@0.4.1:
     dependencies:
       prelude-ls: 1.2.1
@@ -3839,6 +3862,10 @@ snapshots:
   lucia@3.2.0:
     dependencies:
       oslo: 1.2.0
+
+  lucide-svelte@0.447.0(svelte@5.0.0-next.262):
+    dependencies:
+      svelte: 5.0.0-next.262
 
   magic-string@0.30.11:
     dependencies:

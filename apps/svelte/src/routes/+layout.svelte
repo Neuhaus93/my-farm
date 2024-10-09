@@ -1,29 +1,26 @@
 <script lang="ts">
 	import "../app.css";
+	import "leaflet/dist/leaflet.css";
 	import Sidebar from "$lib/ui/sidebar/sidebar.svelte";
+	import Header from "$lib/ui/header.svelte";
+	import { afterNavigate } from "$app/navigation";
 	let { data, children } = $props();
 
-	const site = {
-		name: "My Farm",
-		href: "/",
-		img: "https://picsum.photos/36/36",
-		imgClass: "w-6 h-6",
-	};
-	let iconClass =
-		"flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white";
-	let itemClass =
-		"flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700";
-	let groupClass = "pt-2 space-y-2";
-	const items = [
-		{ label: "Dashboard", href: "/" },
-		{ label: "Categories", href: "/categories" },
-	];
+	afterNavigate(() => {
+		window.HSStaticMethods.autoInit();
+	});
 </script>
 
 {#if data.user}
+	<Header user={data.user} />
+
 	<Sidebar />
 {/if}
 
-<main class={`${data.user ? "ml-[256px] " : ""}px-4 py-5`}>
+<main
+	class={data.user
+		? "p-6 lg:ml-[256px]"
+		: "flex min-h-screen items-center justify-center"}
+>
 	{@render children()}
 </main>
