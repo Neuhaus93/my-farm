@@ -1,0 +1,8 @@
+# Package Managers
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+src/lib/components/ui/
+src/lib/hooks/is-mobile.svelte.ts
+src/lib/utils/classes.ts
+tailwind.config.ts

@@ -1,0 +1,11 @@
+{
+  "name": "@my-farm",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "pnpm --parallel --recursive --filter '*' dev",
+    "db:start": "docker compose up",
+    "db:push": "pnpm --filter @my-farm/sveltekit db:push",
+    "db:studio": "pnpm --filter @my-farm/sveltekit db:studio"
+  }
+}
