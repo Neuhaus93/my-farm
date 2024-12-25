@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>My Farms</title>
+	<title>My Farm</title>
 </svelte:head>
 
 <ParaglideJS {i18n}>
@@ -19,7 +19,7 @@
 
 	{#if data.user}
 		<Sidebar.Provider>
-			<AppSidebar logo={data.logo} />
+			<AppSidebar logo={data.logo} regions={data.regions} />
 			<main class="flex min-h-svh flex-1 flex-col">
 				<header class="flex justify-between p-4">
 					<Sidebar.Trigger />
